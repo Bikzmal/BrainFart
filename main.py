@@ -62,6 +62,7 @@ for c in code:
 			print(cells[pointer])
 		case "#":
 			print(*cells)
+			print(pointer)
 		case ">":
 			_pointer = (pointer + 1) if pointer + 1 < len(cells) else 0
 			cells[_pointer] = cells[pointer]
@@ -77,6 +78,9 @@ for c in code:
 				move_pointer(1)
 			else:
 				move_pointer(2)
+		case "i":
+			inp = input("> ")
+			cells[pointer] = ord(inp[0]) if len(inp) > 0 else ord(" ")
 		case other:
 			continue
 
