@@ -1,4 +1,6 @@
-filename = "examples/loops.bfart"
+import sys
+
+filename = sys.argv[1]
 with open(filename, "r") as file:
 	_code = file.read().split('\n')
 	code = ""
