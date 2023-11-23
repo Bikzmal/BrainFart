@@ -65,6 +65,8 @@ O: Adds all cells to output
 
 i: Get first character from input and puts value in current cell
 
+I: Get string input, fills all cells
+
 @: Prints integer value at current cell
 
 #: Debug command, prints all cells and the pointers location
