@@ -1,6 +1,11 @@
-filename = "main.bfart"
+filename = "examples/loops.bfart"
 with open(filename, "r") as file:
-	code = file.read()
+	_code = file.read().split('\n')
+	code = ""
+	for line in _code:
+		if line.startswith('$'):
+			continue
+		code += line + '\n'
 cptr = 0
 
 cells = [0]
