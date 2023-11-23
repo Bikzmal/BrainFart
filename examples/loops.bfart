@@ -1,0 +1,4 @@
+$ This program prints out the numbers 1 through 10
+$ Python equivalent would be | for i in range(1, 11): print(i)
+!
+A[ra@ls]
