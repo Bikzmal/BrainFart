@@ -1,5 +1,9 @@
 import sys
 
+if len(sys.argv) < 2:
+	print("Usage: python3 main.py <input_file>")
+	sys.exit(1)
+
 filename = sys.argv[1]
 with open(filename, "r") as file:
 	_code = file.read().split('\n')
