@@ -19,6 +19,7 @@ pointer = 0
 lim = 256
 clim = 16
 out = ""
+loop_stack = []
 
 def move_pointer(n):
 	global pointer, cells, lim
@@ -93,9 +94,20 @@ while cptr < len(code):
 		case "i":
 			inp = input("> ")
 			cells[pointer] = ord(inp[0]) if len(inp) > 0 else ord(" ")
+		case "I":
+			inp = input("> ")
+			for i in range(len(cells)):
+				try:
+					cells[i] = ord(inp[i])
+				except:
+					break
+		case "[":
+			loop_stack.append(cptr)
 		case "]":
-			while code[cptr] != "[" and cells[pointer] != 0:
-				cptr -= 1
+			if cells[pointer] == 0:
+				loop_stack.pop()
+			else:
+				cptr = loop_stack[-1]
 	cptr += 1
 
 print(out)
