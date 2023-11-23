@@ -1,6 +1,7 @@
 filename = "main.bfart"
 with open(filename, "r") as file:
 	code = file.read()
+cptr = 0
 
 cells = [0]
 pointer = 0
@@ -16,8 +17,8 @@ def move_pointer(n):
 	elif pointer >= len(cells):
 		pointer = 0
 
-for c in code:
-	match c:
+while cptr < len(code):
+	match code[cptr]:
 		case "!":
 			if not len(cells) == clim:
 				cells.append(0)
@@ -81,7 +82,9 @@ for c in code:
 		case "i":
 			inp = input("> ")
 			cells[pointer] = ord(inp[0]) if len(inp) > 0 else ord(" ")
-		case other:
-			continue
+		case "]":
+			while code[cptr] != "[" and cells[pointer] != 0:
+				cptr -= 1
+	cptr += 1
 
 print(out)
