@@ -17,7 +17,7 @@ cptr = 0
 cells = [0]
 pointer = 0
 lim = 256
-clim = 16
+clim = 8
 out = ""
 loop_stack = []
 
@@ -76,12 +76,30 @@ while cptr < len(code):
 		case "#":
 			print(*cells)
 			print(pointer)
+			print(clim)
+			print(lim)
 		case ">":
 			_pointer = (pointer + 1) if pointer + 1 < len(cells) else 0
 			cells[_pointer] = cells[pointer]
 		case "<":
 			_pointer = (pointer - 1) if pointer - 1 >= 0 else len(cells) - 1
 			cells[_pointer] = cells[pointer]
+		case "{":
+			val1 = cells[pointer]
+			move_pointer(-1)
+			cells[pointer] *= val1
+			cells[pointer] %= lim
+			move_pointer(1)
+		case "}":
+			val1 = cells[pointer]
+			move_pointer(1)
+			cells[pointer] *= val1
+			cells[pointer] %= lim
+			move_pointer(-1)
+		case ":":
+			lim *= 2
+		case ";":
+			clim *= 2
 		case "=":
 			move_pointer(-1)
 			val1 = cells[pointer]
