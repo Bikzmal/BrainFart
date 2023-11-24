@@ -1,7 +1,7 @@
 # BrainFart
 Esoteric programming language made in Python. Inspired by the esoteric language: "BrainF***".
 
-In this repo I have made an example .bfart file, that outputs "Hello World" when executed using main.py.
+In this repo I have made an example .bfart file, that outputs "Hello World" when executed using main.py. I've also included some other examples to show how loops work
 
 # Syntax
 The syntax of this programming language is very easy. Newlines and spaces do not matter. You can write a comment using $ at the start of the line. Inline comments don't work.
