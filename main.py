@@ -119,6 +119,16 @@ while cptr < len(code):
 					cells[i] = ord(inp[i])
 				except:
 					break
+		case "*":
+			inp = input("> ")
+			try:
+				cells[pointer] = int(inp)
+			except:
+				cells[pointer] = 0
+		case "p":
+			print(out)
+		case "P":
+			out = ""
 		case "[":
 			loop_stack.append(cptr)
 		case "]":
