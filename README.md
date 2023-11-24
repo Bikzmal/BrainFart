@@ -15,6 +15,10 @@ The syntax of this programming language is very easy. Newlines and spaces do not
 
 x: Initialize all cells, and set them to 0
 
+:: Increase cell value limit
+
+;: Increase cell limit
+
 
 ### Move pointer
 
@@ -35,6 +39,10 @@ S: Subtract 10 from current cell
 m: Multiplies current cell by 10
 
 d: Divides current cell by 10
+
+{: Mutliplies value on the left by value in current cell
+
+}: Multiplies value on the right by value in current cell
 
 \>: Copies value in current cell to the cell on the right
 
