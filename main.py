@@ -123,6 +123,7 @@ while cptr < len(code):
 			inp = input("> ")
 			try:
 				cells[pointer] = int(inp)
+				cells[pointer] %= lim
 			except:
 				cells[pointer] = 0
 		case "p":
