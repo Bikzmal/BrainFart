@@ -75,6 +75,12 @@ i: Get first character from input and puts value in current cell
 
 I: Get string input, fills all cells
 
+*: Get integer value from input
+
+p: Forces print output
+
+P: Clears output
+
 @: Prints integer value at current cell
 
 #: Debug command, prints all cells and the pointers location
