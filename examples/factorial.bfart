@@ -1,0 +1,24 @@
+$ Factorial in BrainFart
+
+$ Initialize cells and limits
+aaaaa [ s ; ]
+A m [ s : ]
+x
+
+$ Set cells to ascii values of "int"
+a mm aaaaa > r
+aaaaa > r
+aaaaaa ll
+
+$ Force print output, then clear output and cells
+O p P C
+
+$ Prompt for user integer input
+*
+
+$ Actual factorial part
+[ > r s ]
+l
+[ { l ]
+r
+@
