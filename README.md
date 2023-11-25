@@ -84,3 +84,6 @@ P: Clears output
 @: Prints integer value at current cell
 
 #: Debug command, prints all cells and the pointers location
+
+### File Reading
+/: Loads code from another .bfart file. (Requires its own line!)
