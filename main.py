@@ -11,6 +11,12 @@ with open(filename, "r") as file:
 	for line in _code:
 		if line.startswith('$'):
 			continue
+		elif line.startswith('/'):
+			with open(line[1:], "r") as file2:
+				newcode = file2.read().split('\n')
+				for line in newcode:
+					_code.append(line)
+			continue
 		code += line + '\n'
 cptr = 0
 
@@ -35,7 +41,10 @@ while cptr < len(code):
 			if not len(cells) == clim:
 				cells.append(0)
 		case "?":
-			if len(cells) > 1:
+			if len(cells) > 1 and pointer == len(cells) - 1:
+				cells.pop()
+				move_pointer(-1)
+			elif len(cells) > 1:
 				cells.pop()
 		case "x":
 			cells = [0 for i in range(clim)]
@@ -78,6 +87,7 @@ while cptr < len(code):
 			print(pointer)
 			print(clim)
 			print(lim)
+			print(out)
 		case ">":
 			_pointer = (pointer + 1) if pointer + 1 < len(cells) else 0
 			cells[_pointer] = cells[pointer]
