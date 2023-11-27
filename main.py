@@ -116,9 +116,9 @@ while cptr < len(code):
 			move_pointer(1)
 			val2 = cells[pointer]
 			if val1 != val2:
-				move_pointer(1)
+				pass
 			else:
-				move_pointer(2)
+				move_pointer(1)
 		case "i":
 			inp = input("> ")
 			cells[pointer] = ord(inp[0]) if len(inp) > 0 else ord(" ")
