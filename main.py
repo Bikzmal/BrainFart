@@ -52,6 +52,10 @@ while cptr < len(code):
 			move_pointer(1)
 		case "l":
 			move_pointer(-1)
+		case "R":
+			pointer = len(cells) - 1
+		case "L":
+			pointer = 0
 		case "a":
 			cells[pointer] += 1
 			cells[pointer] %= lim
