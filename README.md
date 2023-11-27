@@ -55,7 +55,7 @@ C: Clears all cells
 
 ### Logic
 
-=: Checks if current cell and the one behind are equal, if they are equal move pointer 2 spots to the right, else 1 spot to the right
+=: Checks if current cell and the one behind are equal, if they are equal move pointer 1 spot to the right, else do nothing
 
 
 ### Loops
