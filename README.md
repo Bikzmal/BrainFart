@@ -26,6 +26,10 @@ r: Move the pointer right
 
 l: Move the pointer left
 
+R: Move the pointer to the end
+
+L: Move the pointer to the beginning
+
 ### Change cell values
 
 a: Add 1 to current cell
