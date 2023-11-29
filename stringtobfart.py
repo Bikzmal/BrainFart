@@ -6,7 +6,7 @@ if len(sys.argv) < 2:
 
 string = " ".join(sys.argv[1:])
 
-code = ""
+code = "c"
 
 for c in string:
 	x = ord(c)
