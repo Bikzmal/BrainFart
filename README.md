@@ -5,8 +5,11 @@ In this repo I have made an example .bfart file, that outputs "Hello World" when
 I also made a stringtobfart.py file, which translates an inputted string into bfart.
 
 You can run these files in a terminal/command prompt. 
+
 Use it like:
+
 python main.py (filename).bfart
+
 python stringtobfart.py (string here)
 
 # Syntax
