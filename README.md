@@ -6,7 +6,7 @@ I also made a stringtobfart.py file, which translates an inputted string into bf
 
 You can run these files in a terminal/command prompt. 
 
-Use it like:
+How to run it:
 
 python main.py (filename).bfart
 
